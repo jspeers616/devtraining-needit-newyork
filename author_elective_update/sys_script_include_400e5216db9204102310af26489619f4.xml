@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_58872_needit.BackEndAjaxScript</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>BackEndAjaxScript</name>
+        <script><![CDATA[var BackEndAjaxScript = Class.create();
+BackEndAjaxScript.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	myFunc: function() {
+		return this.getParamater('sysparm_userID');
+		//this.getParamater('sysparm_coolio');
+		try {
+			var answer = "c";
+			var descriptionArray = shortDescription.split(' ');
+
+			var gr = new GlideRecord('x_58872_needit_needit');
+			gr.query('priority', descriptionArray[1]);
+			while (gr.next()) {
+				answer = String(gr.priority);
+			}
+		}
+		catch(err) {
+			return shortDescription;
+		}
+		
+		return "cool";
+	},
+	type: 'BackEndAjaxScript'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-14 18:37:56</sys_created_on>
+        <sys_id>400e5216db9204102310af26489619f4</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>BackEndAjaxScript</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_400e5216db9204102310af26489619f4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-14 19:37:41</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>1c3d4d09db957bc02f68c5970596198c</instance_id>
+        <instance_name>dev85535</instance_name>
+        <name>sys_script_include_400e5216db9204102310af26489619f4</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_58872_needit.BackEndAjaxScript&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;BackEndAjaxScript&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var BackEndAjaxScript = Class.create();
+BackEndAjaxScript.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	myFunc: function() {
+		return this.getParamater('sysparm_userID');
+		//this.getParamater('sysparm_coolio');
+		try {
+			var answer = "c";
+			var descriptionArray = shortDescription.split(' ');
+
+			var gr = new GlideRecord('x_58872_needit_needit');
+			gr.query('priority', descriptionArray[1]);
+			while (gr.next()) {
+				answer = String(gr.priority);
+			}
+		}
+		catch(err) {
+			return shortDescription;
+		}
+		
+		return "cool";
+	},
+	type: 'BackEndAjaxScript'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-01-14 18:37:56&lt;/sys_created_on&gt;&lt;sys_id&gt;400e5216db9204102310af26489619f4&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_name&gt;BackEndAjaxScript&lt;/sys_name&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_400e5216db9204102310af26489619f4&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-01-14 19:37:41&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>512337164</payload_hash>
+        <record_name>BackEndAjaxScript</record_name>
+        <reverted_from/>
+        <source>a8852102db52c0102310af264896198c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-14 19:37:41</sys_created_on>
+        <sys_id>ce0c6216dbd204102310af264896192d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>16fa58fc84f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-14 19:37:41</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>4a0c6216cbd20410bc4d99f1d6eafd2d</update_guid>
+        <update_guid_history>4a0c6216cbd20410bc4d99f1d6eafd2d:512337164,e09ba21625d204108d09ede63b9fa606:-1495105561,95896a52a7d204101efacb861509a8eb:1467483683,ef88225289d2041030a8d021baa00bf1:313489917,95682e1286d20410fcef2754d679a35f:-1051438708,e0282a12fad2041064cff8efa83802d1:396958799,03f76612d3d20410c204e5d02e0a69b6:-1839030465,3ce7e6125dd20410c4540fc4ce80ca6e:-2022677521,5da76ade89920410a41e617c2dffaa46:111676263,75872ede2f920410aaea57cf4c104392:1441831253,eb372ade76920410925ecb2aa6b02a7e:528961164,c7272ade3f92041013f4ffdb7ddcab00:1633646908,18f6a2de90920410e5edcc4166b6f37b:796217973,74d662de5a920410199ff6532964e6d3:-397129146,6275ae1e6e920410cb42995d2f18c7b9:1848470695,af55aa5e6e920410b20b591f901a5c43:-1273534805,b143e29ae4920410efadf3ca69b589c1:-1527982357,4f5e1a521c920410581a97ab054568e0:-1984203003</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-01-14 20:33:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>396a4a539289447091161e2c3c555611</sys_id>
+        <sys_metadata>400e5216db9204102310af26489619f4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BackEndAjaxScript</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_script_include_400e5216db9204102310af26489619f4</sys_update_name>
+        <sys_update_version display_value="sys_script_include_400e5216db9204102310af26489619f4">ce0c6216dbd204102310af264896192d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-01-14 20:33:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
